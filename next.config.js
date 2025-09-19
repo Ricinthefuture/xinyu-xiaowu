@@ -6,10 +6,6 @@ const nextConfig = {
   skipTrailingSlashRedirect: true,
   images: {
     unoptimized: true
-  },
-  // 禁用服务器端功能以支持静态导出
-  experimental: {
-    missingSuspenseWithCSRBailout: false,
   }
 }
 
