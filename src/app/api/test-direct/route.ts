@@ -39,7 +39,7 @@ export async function GET() {
     clearTimeout(timeoutId)
     
     console.log('📊 响应状态:', response.status)
-    console.log('📋 响应头:', [...response.headers.entries()])
+    console.log('📋 响应头:', Array.from(response.headers.entries()))
 
     if (!response.ok) {
       const errorText = await response.text()
