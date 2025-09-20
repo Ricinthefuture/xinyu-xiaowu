@@ -2,9 +2,7 @@ const path = require('path')
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Cloudflare Pages 静态导出配置
-  output: 'export',
-  trailingSlash: true,
+  // Cloudflare Pages 标准配置
   images: {
     unoptimized: true
   },
@@ -15,6 +13,10 @@ const nextConfig = {
       '@': path.resolve(__dirname, 'src'),
     }
     return config
+  },
+  // Cloudflare Pages 兼容性设置
+  experimental: {
+    serverComponentsExternalPackages: ['@supabase/supabase-js']
   }
 }
 
