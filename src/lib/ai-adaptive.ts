@@ -325,7 +325,7 @@ ABC理论核心：
     const results = {
       hasToken: !!this.apiToken,
       tokenLength: this.apiToken?.length || 0,
-      models: {}
+      models: {} as Record<string, boolean>
     }
 
     for (const model of this.availableModels) {
