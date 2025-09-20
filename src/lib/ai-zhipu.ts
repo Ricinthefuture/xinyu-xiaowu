@@ -327,7 +327,7 @@ class ZhipuAIClient {
 
   // 诊断方法
   async diagnose(): Promise<any> {
-    const results = {
+    const results: Record<string, any> = {
       hasApiKey: !!this.apiKey,
       apiKeyLength: this.apiKey?.length || 0,
       model: this.model,
