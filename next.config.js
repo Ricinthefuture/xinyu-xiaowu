@@ -2,8 +2,7 @@ const path = require('path')
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Cloudflare Pages 兼容配置
-  output: 'standalone',
+  // Cloudflare Pages 标准配置
   images: {
     unoptimized: true
   },
